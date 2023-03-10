@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "SSS",
+    "WWW"
+  ],
+  "result": {
+    "item": "biomebackport:chiseled_bookshelf"
+  }
+}

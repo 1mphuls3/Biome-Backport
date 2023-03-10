@@ -1,0 +1,6 @@
+{
+  "parent": "biomebackport:block/custom_fence_side_west",
+  "textures": {
+    "texture": "biomebackport:block/bamboo_fence"
+  }
+}

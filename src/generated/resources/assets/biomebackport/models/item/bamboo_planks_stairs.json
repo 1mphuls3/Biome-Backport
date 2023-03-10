@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/bamboo_planks_stairs",
+  "render_type": "minecraft:translucent"
+}

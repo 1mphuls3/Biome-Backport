@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:brick"
+    }
+  },
+  "pattern": [
+    " B ",
+    "B B",
+    "BBB"
+  ],
+  "result": {
+    "item": "biomebackport:decorated_pot"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/cherry_leaves",
+  "render_type": "minecraft:translucent"
+}

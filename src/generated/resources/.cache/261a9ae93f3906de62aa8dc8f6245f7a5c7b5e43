@@ -1,0 +1,19 @@
+// 1.19.2	2023-03-04T13:55:21.0751508	BiomeBackport Item Tags
+06000139fb47b5ddade5ec0f6a640a4981f1ea7f data/biomebackport/tags/items/cherry_logs.json
+17956ed1f69ea572628a0d1dd9cfbec5409ad422 data/minecraft/tags/items/buttons.json
+64b81c91a5e44bed16affc4dcbc5d0d214e3f50e data/minecraft/tags/items/doors.json
+912e0de192495a7e345529b87c29ba355275e172 data/minecraft/tags/items/fences.json
+a9900875b0aca127656cc0204b5fa01ea59ff4f4 data/minecraft/tags/items/leaves.json
+b094647d0864afd867923be0e42859df66b6241f data/minecraft/tags/items/logs.json
+ccef273d85c130d23dec173181564d934d712d4c data/minecraft/tags/items/planks.json
+a4bb130442bd39c9867f7ceaae886bcc127dd50a data/minecraft/tags/items/saplings.json
+17956ed1f69ea572628a0d1dd9cfbec5409ad422 data/minecraft/tags/items/slabs.json
+1ddb57d0cfb7188ce416db04d20776885557bacd data/minecraft/tags/items/stairs.json
+d080e6e67a9cff4763de23f7654d4e825ece0bc2 data/minecraft/tags/items/trapdoors.json
+4d15273f12c887a30257c67b50878dc36015a2a5 data/minecraft/tags/items/wooden_buttons.json
+6e51228bd8564fc953cc172408ad6c151254243c data/minecraft/tags/items/wooden_doors.json
+0f13ac5df0614983de8271f5de19d7cd7f0f2d0b data/minecraft/tags/items/wooden_fences.json
+a250cc848008eaf0fe9a95f240438b8fb5674ba0 data/minecraft/tags/items/wooden_pressure_plates.json
+603b9f336265eabf098ec6c319e68c8971d99418 data/minecraft/tags/items/wooden_slabs.json
+324f16bee1f3ddec293bce14420ab7012d1725a1 data/minecraft/tags/items/wooden_stairs.json
+d080e6e67a9cff4763de23f7654d4e825ece0bc2 data/minecraft/tags/items/wooden_trapdoors.json

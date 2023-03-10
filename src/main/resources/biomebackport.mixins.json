@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_16",
+  "package": "com.myst.biomebackport.core.mixin",
+  "refmap": "abigne.mixins.refmap.json",
+  "mixins": [
+    "BlockStateProviderAccess"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

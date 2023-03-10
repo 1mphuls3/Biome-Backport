@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/block_of_bamboo",
+  "render_type": "minecraft:translucent"
+}

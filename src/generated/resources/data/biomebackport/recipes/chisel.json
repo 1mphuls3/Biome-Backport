@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "W": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    " C",
+    "W "
+  ],
+  "result": {
+    "item": "biomebackport:chisel"
+  }
+}

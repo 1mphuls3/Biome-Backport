@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/cherry_log",
+  "render_type": "minecraft:translucent"
+}

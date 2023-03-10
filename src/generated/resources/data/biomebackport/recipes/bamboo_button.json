@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "biomebackport:bamboo_planks"
+    }
+  ],
+  "result": {
+    "item": "biomebackport:bamboo_button"
+  }
+}

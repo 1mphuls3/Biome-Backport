@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "biomebackport:block_of_bamboo"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "biomebackport:bamboo_planks"
+  }
+}

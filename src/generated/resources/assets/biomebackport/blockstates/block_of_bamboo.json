@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "biomebackport:block/block_of_bamboo_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "biomebackport:block/block_of_bamboo"
+    },
+    "axis=z": {
+      "model": "biomebackport:block/block_of_bamboo_horizontal",
+      "x": 90
+    }
+  }
+}

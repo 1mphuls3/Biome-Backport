@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "biomebackport:block/cherry_slab"
+    },
+    "type=double": {
+      "model": "biomebackport:block/cherry_planks"
+    },
+    "type=top": {
+      "model": "biomebackport:block/cherry_slab_top"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/cherry_slab",
+  "render_type": "minecraft:translucent"
+}

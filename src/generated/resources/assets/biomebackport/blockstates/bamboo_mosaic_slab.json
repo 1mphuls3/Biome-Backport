@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "biomebackport:block/bamboo_mosaic_slab"
+    },
+    "type=double": {
+      "model": "biomebackport:block/bamboo_planks"
+    },
+    "type=top": {
+      "model": "biomebackport:block/bamboo_mosaic_slab_top"
+    }
+  }
+}

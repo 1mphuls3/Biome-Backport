@@ -1,0 +1,629 @@
+{
+  "bamboo_wood_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      { "name": "biomebackport:bamboo_wood/break1", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break2", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break3", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break4", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break5", "volume": 0.9 }
+    ]
+  },
+  "bamboo_wood_fall": {
+    "sounds": [
+      "biomebackport:bamboo_wood/step1",
+      "biomebackport:bamboo_wood/step2",
+      "biomebackport:bamboo_wood/step3",
+      "biomebackport:bamboo_wood/step4",
+      "biomebackport:bamboo_wood/step5",
+      "biomebackport:bamboo_wood/step6"
+    ]
+  },
+  "bamboo_wood_hit": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      { "name": "biomebackport:bamboo_wood/step1", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/step2", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/step3", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/step4", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/step5", "volume": 0.9 }
+    ]
+  },
+  "bamboo_wood_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      { "name": "biomebackport:bamboo_wood/break1", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break2", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break3", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break4", "volume": 0.9 },
+      { "name": "biomebackport:bamboo_wood/break5", "volume": 0.9 }
+    ]
+  },
+  "bamboo_wood_step": {
+    "sounds": [
+      "biomebackport:bamboo_wood/step1",
+      "biomebackport:bamboo_wood/step2",
+      "biomebackport:bamboo_wood/step3",
+      "biomebackport:bamboo_wood/step4",
+      "biomebackport:bamboo_wood/step5",
+      "biomebackport:bamboo_wood/step6"
+    ]
+  },
+  "bamboo_wood_button": {
+    "subtitle": "subtitles.block.button.click",
+    "sounds": [
+      "biomebackport:bamboo_wood_button/bamboo_wood_button"
+    ]
+  },
+  "bamboo_wood_door": {
+    "subtitle": "subtitles.block.door.toggle",
+    "sounds": [
+      "biomebackport:bamboo_wood_door/toggle1",
+      "biomebackport:bamboo_wood_door/toggle2",
+      "biomebackport:bamboo_wood_door/toggle3",
+      "biomebackport:bamboo_wood_door/toggle4"
+    ]
+  },
+  "bamboo_wood_fence": {
+    "subtitle": "subtitles.block.fence_gate.toggle",
+    "sounds": [
+      "biomebackport:bamboo_wood_fence/toggle1",
+      "biomebackport:bamboo_wood_fence/toggle2",
+      "biomebackport:bamboo_wood_fence/toggle3",
+      "biomebackport:bamboo_wood_fence/toggle4"
+    ]
+  },"bamboo_wood_hanging_sign_break": {
+  "subtitle": "subtitles.block.generic.break",
+  "sounds": [
+    {
+      "name": "biomebackport:bamboo_wood_hanging_sign/break1",
+      "volume": 0.8
+    },
+    {
+      "name": "biomebackport:bamboo_wood_hanging_sign/break2",
+      "volume": 0.8
+    },
+    {
+      "name": "biomebackport:bamboo_wood_hanging_sign/break3",
+      "volume": 0.8
+    },
+    {
+      "name": "biomebackport:bamboo_wood_hanging_sign/break4",
+      "volume": 0.8
+    }
+  ]
+},
+  "bamboo_wood_hanging_sign_fall": {
+    "sounds": [
+      "biomebackport:bamboo_wood_hanging_sign/step1",
+      "biomebackport:bamboo_wood_hanging_sign/step2",
+      "biomebackport:bamboo_wood_hanging_sign/step3",
+      "biomebackport:bamboo_wood_hanging_sign/step4"
+    ]
+  },
+  "bamboo_wood_hanging_sign_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/step1",
+        "pitch": 1.1,
+        "volume": 0.7
+      },
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/step2",
+        "pitch": 1.1,
+        "volume": 0.7
+      },
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/step3",
+        "pitch": 1.1,
+        "volume": 0.7
+      },
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/step4",
+        "pitch": 1.1,
+        "volume": 0.7
+      }
+    ]
+  },
+  "bamboo_wood_hanging_sign_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/break1",
+        "volume": 0.8
+      },
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/break2",
+        "volume": 0.8
+      },
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/break3",
+        "volume": 0.8
+      },
+      {
+        "name": "biomebackport:bamboo_wood_hanging_sign/break4",
+        "volume": 0.8
+      }
+    ]
+  },
+  "bamboo_wood_hanging_sign_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:bamboo_wood_hanging_sign/step1",
+      "biomebackport:bamboo_wood_hanging_sign/step2",
+      "biomebackport:bamboo_wood_hanging_sign/step3",
+      "biomebackport:bamboo_wood_hanging_sign/step4"
+    ]
+  },
+  "bamboo_wood_trapdoor": {
+    "subtitle": "subtitles.block.trapdoor.toggle",
+    "sounds": [
+      "biomebackport:bamboo_wood_trapdoor/toggle1",
+      "biomebackport:bamboo_wood_trapdoor/toggle2",
+      "biomebackport:bamboo_wood_trapdoor/toggle3",
+      "biomebackport:bamboo_wood_trapdoor/toggle4"
+    ]
+  },
+  "cherry_leaves_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "biomebackport:cherry_leaves/break1",
+      "biomebackport:cherry_leaves/break2",
+      "biomebackport:cherry_leaves/break3",
+      "biomebackport:cherry_leaves/break4",
+      "biomebackport:cherry_leaves/break5"
+    ]
+  },
+  "cherry_leaves_fall": {
+    "sounds": [
+      "biomebackport:cherry_leaves/step1",
+      "biomebackport:cherry_leaves/step2",
+      "biomebackport:cherry_leaves/step3",
+      "biomebackport:cherry_leaves/step4",
+      "biomebackport:cherry_leaves/step5"
+    ]
+  },
+  "cherry_leaves_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      { "name": "biomebackport:cherry_leaves/step1", "volume": 0.8 },
+      { "name": "biomebackport:cherry_leaves/step2", "volume": 0.8 },
+      { "name": "biomebackport:cherry_leaves/step3", "volume": 0.8 },
+      { "name": "biomebackport:cherry_leaves/step4", "volume": 0.8 },
+      { "name": "biomebackport:cherry_leaves/step5", "volume": 0.8 }
+    ]
+  },
+  "cherry_leaves_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "biomebackport:cherry_leaves/break1",
+      "biomebackport:cherry_leaves/break2",
+      "biomebackport:cherry_leaves/break3",
+      "biomebackport:cherry_leaves/break4",
+      "biomebackport:cherry_leaves/break5"
+    ]
+  },
+  "cherry_leaves_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:cherry_leaves/step1",
+      "biomebackport:cherry_leaves/step2",
+      "biomebackport:cherry_leaves/step3",
+      "biomebackport:cherry_leaves/step4",
+      "biomebackport:cherry_leaves/step5"
+    ]
+  },
+
+  "cherry_wood_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      { "name": "biomebackport:cherry_wood/break1", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break2", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break3", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break4", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break5", "volume": 0.9 }
+    ]
+  },
+  "cherry_wood_fall": {
+    "sounds": [
+      "biomebackport:cherry_wood/step1",
+      "biomebackport:cherry_wood/step2",
+      "biomebackport:cherry_wood/step3",
+      "biomebackport:cherry_wood/step4",
+      "biomebackport:cherry_wood/step5",
+      "biomebackport:cherry_wood/step6"
+    ]
+  },
+  "cherry_wood_hit": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      { "name": "biomebackport:cherry_wood/step1", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/step2", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/step3", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/step4", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/step5", "volume": 0.9 }
+    ]
+  },
+  "cherry_wood_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      { "name": "biomebackport:cherry_wood/break1", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break2", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break3", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break4", "volume": 0.9 },
+      { "name": "biomebackport:cherry_wood/break5", "volume": 0.9 }
+    ]
+  },
+  "cherry_wood_step": {
+    "sounds": [
+      "biomebackport:cherry_wood/step1",
+      "biomebackport:cherry_wood/step2",
+      "biomebackport:cherry_wood/step3",
+      "biomebackport:cherry_wood/step4",
+      "biomebackport:cherry_wood/step5",
+      "biomebackport:cherry_wood/step6"
+    ]
+  },
+  "cherrywood_button": {
+    "subtitle": "subtitles.block.button.click",
+    "sounds": [
+      "biomebackport:cherrywood_button/cherrywood_click"
+    ]
+  },
+  "cherrywood_door": {
+    "subtitle": "subtitles.block.door.toggle",
+    "sounds": [
+      "biomebackport:cherrywood_door/toggle1",
+      "biomebackport:cherrywood_door/toggle2",
+      "biomebackport:cherrywood_door/toggle3",
+      "biomebackport:cherrywood_door/toggle4"
+    ]
+  },
+  "cherry_wood_hanging_sign_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "biomebackport:cherry_wood_hanging_sign/break1",
+      "biomebackport:cherry_wood_hanging_sign/break2",
+      "biomebackport:cherry_wood_hanging_sign/break3",
+      "biomebackport:cherry_wood_hanging_sign/break4"
+    ]
+  },
+  "cherry_wood_hanging_sign_fall": {
+    "sounds": [
+      "biomebackport:cherry_wood_hanging_sign/step1",
+      "biomebackport:cherry_wood_hanging_sign/step2",
+      "biomebackport:cherry_wood_hanging_sign/step3",
+      "biomebackport:cherry_wood_hanging_sign/step4"
+    ]
+  },
+  "cherry_wood_hanging_sign_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "biomebackport:cherry_wood_hanging_sign/step1",
+      "biomebackport:cherry_wood_hanging_sign/step2",
+      "biomebackport:cherry_wood_hanging_sign/step3",
+      "biomebackport:cherry_wood_hanging_sign/step4"
+    ]
+  },
+  "cherry_wood_hanging_sign_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "biomebackport:cherry_wood_hanging_sign/break1",
+      "biomebackport:cherry_wood_hanging_sign/break2",
+      "biomebackport:cherry_wood_hanging_sign/break3",
+      "biomebackport:cherry_wood_hanging_sign/break4"
+    ]
+  },
+  "cherry_wood_hanging_sign_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:cherry_wood_hanging_sign/step1",
+      "biomebackport:cherry_wood_hanging_sign/step2",
+      "biomebackport:cherry_wood_hanging_sign/step3",
+      "biomebackport:cherry_wood_hanging_sign/step4"
+    ]
+  },
+  "cherrywood_fence_gate": {
+    "subtitle": "subtitles.block.fence_gate.toggle",
+    "sounds": [
+      "biomebackport:cherrywood_fence_gate/toggle1",
+      "biomebackport:cherrywood_fence_gate/toggle2",
+      "biomebackport:cherrywood_fence_gate/toggle3"
+    ]
+  },
+  "cherrywood_trapdoor": {
+    "subtitle": "subtitles.block.trapdoor.toggle",
+    "sounds": [
+      "biomebackport:cherrywood_trapdoor/toggle1",
+      "biomebackport:cherrywood_trapdoor/toggle2",
+      "biomebackport:cherrywood_trapdoor/toggle3"
+    ]
+  },
+  "chiseled_bookshelf_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "biomebackport:chiseled_bookshelf/break1",
+      "biomebackport:chiseled_bookshelf/break2",
+      "biomebackport:chiseled_bookshelf/break3",
+      "biomebackport:chiseled_bookshelf/break4",
+      "biomebackport:chiseled_bookshelf/break5",
+      "biomebackport:chiseled_bookshelf/break6"
+    ]
+  },
+  "chiseled_bookshelf_fall": {
+    "sounds": [
+      "biomebackport:chiseled_bookshelf/step1",
+      "biomebackport:chiseled_bookshelf/step2",
+      "biomebackport:chiseled_bookshelf/step3",
+      "biomebackport:chiseled_bookshelf/step4",
+      "biomebackport:chiseled_bookshelf/step5"
+    ]
+  },
+  "chiseled_bookshelf_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "biomebackport:chiseled_bookshelf/step1",
+      "biomebackport:chiseled_bookshelf/step2",
+      "biomebackport:chiseled_bookshelf/step3",
+      "biomebackport:chiseled_bookshelf/step4",
+      "biomebackport:chiseled_bookshelf/step5"
+    ]
+  },
+  "chiseled_bookshelf_insert": {
+    "subtitle": "subtitles.chiseled_bookshelf_insert",
+    "sounds": [
+      { "name": "biomebackport:chiseled_bookshelf/insert1", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert1", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert1", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert2", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert2", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert2", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert3", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert3", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert3", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert4", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert4", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert4", "pitch": 1.1, "volume": 0.8 }
+    ]
+  },
+  "chiseled_bookshelf_insert_enchanted": {
+    "subtitle": "subtitles.chiseled_bookshelf_insert_enchanted",
+    "sounds": [
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted1", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted1", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted1", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted2", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted2", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted2", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted3", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted3", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted3", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted4", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted4", "pitch": 0.85, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/insert_enchanted4", "pitch": 1.1, "volume": 0.8 }
+    ]
+  },
+  "chiseled_bookshelf_pickup": {
+    "subtitle": "subtitles.chiseled_bookshelf_take",
+    "sounds": [
+      { "name": "biomebackport:chiseled_bookshelf/pickup1", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup1", "pitch": 0.8, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup1", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup2", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup2", "pitch": 0.8, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup2", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup3", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup3", "pitch": 0.8, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup3", "pitch": 1.1, "volume": 0.8 }
+    ]
+  },
+  "chiseled_bookshelf_pickup_enchanted": {
+    "subtitle": "subtitles.chiseled_bookshelf_take_enchanted",
+    "sounds": [
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted1", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted1", "pitch": 0.8, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted1", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted2", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted2", "pitch": 0.8, "volume": 0.8},
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted2", "pitch": 1.1, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted3", "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted3", "pitch": 0.8, "volume": 0.8 },
+      { "name": "biomebackport:chiseled_bookshelf/pickup_enchanted3", "pitch": 1.1, "volume": 0.8 }
+    ]
+  },
+  "chiseled_bookshelf_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "biomebackport:chiseled_bookshelf/break1",
+      "biomebackport:chiseled_bookshelf/break2",
+      "biomebackport:chiseled_bookshelf/break3",
+      "biomebackport:chiseled_bookshelf/break4",
+      "biomebackport:chiseled_bookshelf/break5",
+      "biomebackport:chiseled_bookshelf/break6"
+    ]
+  },
+  "chiseled_bookshelf_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:chiseled_bookshelf/step1",
+      "biomebackport:chiseled_bookshelf/step2",
+      "biomebackport:chiseled_bookshelf/step3",
+      "biomebackport:chiseled_bookshelf/step4",
+      "biomebackport:chiseled_bookshelf/step5"
+    ]
+  },
+  "chisel_use": {
+    "subtitle": "subtitles.item.chisel_use",
+    "sounds": [
+      "ui/stonecutter/cut1",
+      {
+        "name": "ui/stonecutter/cut1",
+        "pitch": 0.92
+      },
+      "ui/stonecutter/cut2",
+      {
+        "name": "ui/stonecutter/cut2",
+        "pitch": 0.92
+      }
+    ]
+  },"decorated_pot_break": {
+  "sounds": [
+    "biomebackport:decorated_pot/break1",
+    "biomebackport:decorated_pot/break2",
+    "biomebackport:decorated_pot/break3",
+    "biomebackport:decorated_pot/break4"
+  ],
+  "subtitle": "subtitles.block.generic.break"
+},
+  "decorated_pot_fall": {
+    "sounds": [
+      "biomebackport:decorated_pot/step1",
+      "biomebackport:decorated_pot/step2",
+      "biomebackport:decorated_pot/step3",
+      "biomebackport:decorated_pot/step4",
+      "biomebackport:decorated_pot/step5"
+    ]
+  },
+  "decorated_pot_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "biomebackport:decorated_pot/step1",
+      "biomebackport:decorated_pot/step2",
+      "biomebackport:decorated_pot/step3",
+      "biomebackport:decorated_pot/step4",
+      "biomebackport:decorated_pot/step5"
+    ]
+  },
+  "decorated_pot_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "biomebackport:decorated_pot/break1",
+      "biomebackport:decorated_pot/break2",
+      "biomebackport:decorated_pot/break3",
+      "biomebackport:decorated_pot/break4"
+    ]
+  },
+  "decorated_pot_shatter": {
+    "subtitle": "subtitles.biomebackport.decorated_pot_shatter",
+    "sounds": [
+      "biomebackport:decorated_pot/shatter1",
+      "biomebackport:decorated_pot/shatter2",
+      "biomebackport:decorated_pot/shatter3",
+      "biomebackport:decorated_pot/shatter4",
+      "biomebackport:decorated_pot/shatter5",
+      "biomebackport:decorated_pot/shatter6"
+    ]
+  },
+  "decorated_pot_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:decorated_pot/step1",
+      "biomebackport:decorated_pot/step2",
+      "biomebackport:decorated_pot/step3",
+      "biomebackport:decorated_pot/step4",
+      "biomebackport:decorated_pot/step5"
+    ]
+  },
+  "hanging_sign_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "biomebackport:hanging_sign/break1",
+      "biomebackport:hanging_sign/break2",
+      "biomebackport:hanging_sign/break3",
+      "biomebackport:hanging_sign/break4"
+    ]
+  },
+  "hanging_sign_fall": {
+    "sounds": [
+      "biomebackport:hanging_sign/step1",
+      "biomebackport:hanging_sign/step2",
+      "biomebackport:hanging_sign/step3",
+      "biomebackport:hanging_sign/step4"
+    ]
+  },
+  "hanging_sign_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "biomebackport:hanging_sign/step1",
+      "biomebackport:hanging_sign/step2",
+      "biomebackport:hanging_sign/step3",
+      "biomebackport:hanging_sign/step4"
+    ]
+  },
+  "hanging_sign_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "biomebackport:hanging_sign/break1",
+      "biomebackport:hanging_sign/break2",
+      "biomebackport:hanging_sign/break3",
+      "biomebackport:hanging_sign/break4"
+    ]
+  },
+  "hanging_sign_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:hanging_sign/step1",
+      "biomebackport:hanging_sign/step2",
+      "biomebackport:hanging_sign/step3",
+      "biomebackport:hanging_sign/step4"
+    ]
+  },
+
+  "nether_wood_hanging_sign_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "biomebackport:nether_wood_hanging_sign/break1",
+      "biomebackport:nether_wood_hanging_sign/break2",
+      "biomebackport:nether_wood_hanging_sign/break3",
+      "biomebackport:nether_wood_hanging_sign/break4"
+    ]
+  },
+  "nether_wood_hanging_sign_fall": {
+    "sounds": [
+      "biomebackport:nether_wood_hanging_sign/step1",
+      "biomebackport:nether_wood_hanging_sign/step2",
+      "biomebackport:nether_wood_hanging_sign/step3",
+      "biomebackport:nether_wood_hanging_sign/step4"
+    ]
+  },
+  "nether_wood_hanging_sign_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      {
+        "name": "biomebackport:nether_wood_hanging_sign/step1",
+        "volume": 0.8
+      },
+      {
+        "name": "biomebackport:nether_wood_hanging_sign/step2",
+        "volume": 0.8
+      },
+      {
+        "name": "biomebackport:nether_wood_hanging_sign/step3",
+        "volume": 0.8
+      },
+      {
+        "name": "biomebackport:nether_wood_hanging_sign/step4",
+        "volume": 0.8
+      }
+    ]
+  },
+  "nether_wood_hanging_sign_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "biomebackport:nether_wood_hanging_sign/break1",
+      "biomebackport:nether_wood_hanging_sign/break2",
+      "biomebackport:nether_wood_hanging_sign/break3",
+      "biomebackport:nether_wood_hanging_sign/break4"
+    ]
+  },
+  "nether_wood_hanging_sign_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "biomebackport:nether_wood_hanging_sign/step1",
+      "biomebackport:nether_wood_hanging_sign/step2",
+      "biomebackport:nether_wood_hanging_sign/step3",
+      "biomebackport:nether_wood_hanging_sign/step4"
+    ]
+  }
+}

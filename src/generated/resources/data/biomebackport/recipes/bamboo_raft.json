@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "biomebackport:bamboo_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "W W",
+    "WWW"
+  ],
+  "result": {
+    "item": "biomebackport:bamboo_raft"
+  }
+}

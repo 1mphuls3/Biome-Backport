@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "biomebackport:block/bamboo_mosaic"
+  }
+}

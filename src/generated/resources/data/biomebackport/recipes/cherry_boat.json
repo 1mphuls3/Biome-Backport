@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "biomebackport:cherry_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "W W",
+    "WWW"
+  ],
+  "result": {
+    "item": "biomebackport:cherry_boat"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "biomebackport:pink_petals",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "flower_amount": "4"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "biomebackport:pink_petals"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "count": 4.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "biomebackport:pink_petals",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "flower_amount": "3"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "biomebackport:pink_petals"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "count": 3.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "biomebackport:pink_petals",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "flower_amount": "2"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "biomebackport:pink_petals"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "count": 2.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "biomebackport:pink_petals",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "flower_amount": "1"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "biomebackport:pink_petals"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "count": 1.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

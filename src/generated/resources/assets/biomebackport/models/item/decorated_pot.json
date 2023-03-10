@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/decorated_pot",
+  "render_type": "minecraft:translucent"
+}

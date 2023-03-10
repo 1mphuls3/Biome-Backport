@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "biomebackport:block/cherry_log",
+    "side": "biomebackport:block/cherry_log"
+  }
+}

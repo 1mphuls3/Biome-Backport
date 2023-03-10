@@ -1,0 +1,4 @@
+{
+  "parent": "biomebackport:block/bamboo_mosaic_slab",
+  "render_type": "minecraft:translucent"
+}

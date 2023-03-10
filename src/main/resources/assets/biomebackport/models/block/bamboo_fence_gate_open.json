@@ -1,0 +1,7 @@
+{
+  "parent": "biomebackport:block/template_custom_fence_gate_open",
+  "textures": {
+    "particle": "biomebackport:block/bamboo_fence_gate_particle",
+    "texture": "biomebackport:block/bamboo_fence_gate"
+  }
+}

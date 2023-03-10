@@ -1,0 +1,7 @@
+{
+  "parent": "biomebackport:block/template_fence_gate_wall_open",
+  "textures": {
+    "particle": "biomebackport:block/cherry_planks",
+    "texture": "biomebackport:block/cherry_planks"
+  }
+}

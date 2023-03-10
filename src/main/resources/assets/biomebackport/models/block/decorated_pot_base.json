@@ -1,0 +1,90 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "biomebackport:block/decorated_pot_base",
+		"1": "biomebackport:block/decorated_pot_side",
+		"particle": "block/terracotta"
+	},
+	"elements": [
+		{
+			"from": [1, 16, 1],
+			"to": [15, 16, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 24, 8]},
+			"faces": {
+				"up": {"uv": [0, 6.5, 7, 13.5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [1, 0, 1],
+			"to": [15, 0, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 24, 8]},
+			"faces": {
+				"down": {"uv": [0, 6.5, 7, 13.5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 16, 5],
+			"to": [11, 17, 11],
+			"faces": {
+				"north": {"uv": [0, 5.5, 3, 6], "texture": "#0"},
+				"east": {"uv": [3, 5.5, 6, 6], "texture": "#0"},
+				"south": {"uv": [6, 5.5, 9, 6], "texture": "#0"},
+				"west": {"uv": [9, 5.5, 12, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 16.98, 4],
+			"to": [12, 19.98, 12],
+			"faces": {
+				"north": {"uv": [0, 4, 4, 5.5], "texture": "#0"},
+				"east": {"uv": [4, 4, 8, 5.5], "texture": "#0"},
+				"south": {"uv": [8, 4, 12, 5.5], "texture": "#0"},
+				"west": {"uv": [12, 4, 16, 5.5], "texture": "#0"},
+				"up": {"uv": [4, 0, 8, 4], "texture": "#0"},
+				"down": {"uv": [8, 0, 12, 4], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1.08, 0, 1],
+			"to": [1.08, 16, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"west": {"uv": [1, 0, 15, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [1, 0, 14.92],
+			"to": [15, 16, 14.92],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"south": {"uv": [1, 0, 15, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [14.92, 0, 1],
+			"to": [14.92, 16, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [1, 0, 15, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [1, 0, 1.08],
+			"to": [15, 16, 1.08],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [1, 0, 15, 16], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "main",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7]
+		}
+	]
+}
