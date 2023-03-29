@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:chain"
+    },
+    "W": {
+      "item": "minecraft:stripped_mangrove_log"
+    }
+  },
+  "pattern": [
+    "# #",
+    "WWW",
+    "WWW"
+  ],
+  "result": {
+    "count": 3,
+    "item": "biomebackport:mangrove_hanging_sign"
+  }
+}

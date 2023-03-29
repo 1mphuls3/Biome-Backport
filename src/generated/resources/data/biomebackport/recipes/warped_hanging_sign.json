@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:chain"
+    },
+    "W": {
+      "item": "minecraft:stripped_warped_stem"
+    }
+  },
+  "pattern": [
+    "# #",
+    "WWW",
+    "WWW"
+  ],
+  "result": {
+    "count": 3,
+    "item": "biomebackport:warped_hanging_sign"
+  }
+}
