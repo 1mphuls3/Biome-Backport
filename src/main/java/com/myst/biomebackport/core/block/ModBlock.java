@@ -1,5 +1,6 @@
 package com.myst.biomebackport.core.block;
 
+import com.myst.biomebackport.core.blockentity.ContainerBlockEntity;
 import com.myst.biomebackport.core.blockentity.ModBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -96,14 +97,14 @@ public class ModBlock<T extends BlockEntity> extends Block implements EntityBloc
     }
     
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult ray) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (isBlockEntity(state)) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity instanceof ModBlockEntity modBlockEntity) {
-                return modBlockEntity.onUse(player, hand);
+            if (blockEntity instanceof ModBlockEntity modBlock) {
+                return modBlock.onUse(player, hand);
             }
         }
-        return super.use(state, level, pos, player, hand, ray);
+        return super.use(state, level, pos, player, hand, hit);
     }
 
 

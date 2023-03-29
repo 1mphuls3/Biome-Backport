@@ -1,6 +1,7 @@
 package com.myst.biomebackport.core.registry;
 
 import com.myst.biomebackport.BiomeBackport;
+import com.myst.biomebackport.common.item.ChiselItem;
 import com.myst.biomebackport.common.item.HangingSignItem;
 import com.myst.biomebackport.common.item.ModBoatItem;
 import com.myst.biomebackport.common.item.ModChestBoatItem;
@@ -98,7 +99,7 @@ public class ItemRegistry {
     public static final RegistryObject<BlockItem> DECORATED_POT = ITEMS.register("decorated_pot",
             () -> new BlockItem(BlockRegistry.DECORATED_POT.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(250)));
+            () -> new ChiselItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(250)));
     public static final RegistryObject<BlockItem> OAK_HANGING_SIGN = ITEMS.register("oak_hanging_sign",
             () -> new HangingSignItem(BlockRegistry.OAK_HANGING_SIGN.get(), BlockRegistry.OAK_HANGING_SIGN_BAR.get(),
                     new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));

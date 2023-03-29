@@ -2,19 +2,28 @@ package com.myst.biomebackport.common.blockentity;
 
 import com.google.common.base.Suppliers;
 import com.myst.biomebackport.client.DecoratedPotContainerMenu;
+import com.myst.biomebackport.common.block.DecoratedPotBlock;
 import com.myst.biomebackport.core.blockentity.ContainerBlockEntity;
 import com.myst.biomebackport.core.blockentity.ExtendedItemStackHandler;
+import com.myst.biomebackport.core.config.Config;
+import com.myst.biomebackport.core.config.ServerConfig;
 import com.myst.biomebackport.core.helper.BlockHelper;
+import com.myst.biomebackport.core.helper.IntHelper;
 import com.myst.biomebackport.core.registry.BlockEntityRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
@@ -23,38 +32,34 @@ public class DecoratedPotBlockEntity extends ContainerBlockEntity {
     public DecoratedPotBlockEntity(BlockPos pos, BlockState state) {
         super(BlockEntityRegistry.DECORATED_POT.get(), pos, state, 9);
     }
+    public int NORTH;
+    public int EAST;
+    public int WEST;
+    public int SOUTH;
 
-    @Override
-    public int getContainerSize() {
-        return 9;
+    public InteractionResult onUse(Player player, Direction side) {
+        int step = player.isShiftKeyDown() ? -1 : 1;
+
+        if(side == Direction.NORTH) {
+            NORTH = IntHelper.wrapAround(NORTH + step, 0, 20);
+        } else if(side == Direction.EAST) {
+            EAST = IntHelper.wrapAround(EAST + step, 0, 20);
+        } else if(side == Direction.WEST) {
+            WEST = IntHelper.wrapAround(WEST + step, 0, 20);
+        } else if(side == Direction.SOUTH) {
+            SOUTH = IntHelper.wrapAround(SOUTH + step, 0, 20);
+        }
+        return InteractionResult.SUCCESS;
     }
 
     @Override
-    protected void updateBlockState(BlockState state, boolean b) {
-        //
+    public int getContainerSize() {
+        return ServerConfig.SLOTS.get();
     }
 
     @Override
     public Component getDefaultName() {
         return Component.translatable("block.biomebackport.pot");
-    }
-
-    @Override
-    protected void playOpenSound(BlockState state) {
-        double d0 = (double) this.worldPosition.getX() + 0.5D;
-        double d1 = (double) this.worldPosition.getY() + 1;
-        double d2 = (double) this.worldPosition.getZ() + 0.5D;
-        /*this.level.playSound(null, d0, d1, d2, ModSounds.SACK_OPEN.get(), SoundSource.BLOCKS, 1,
-                this.level.random.nextFloat() * 0.1F + 0.95F);*/
-    }
-
-    @Override
-    protected void playCloseSound(BlockState state) {
-        double d0 = (double) this.worldPosition.getX() + 0.5D;
-        double d1 = (double) this.worldPosition.getY() + 1;
-        double d2 = (double) this.worldPosition.getZ() + 0.5D;
-        /*this.level.playSound(null, d0, d1, d2, ModSounds.SACK_OPEN.get(), SoundSource.BLOCKS, 1,
-                this.level.random.nextFloat() * 0.1F + 0.8F);*/
     }
 
     @Override
@@ -82,5 +87,38 @@ public class DecoratedPotBlockEntity extends ContainerBlockEntity {
 
     public static boolean isAllowedInShulker(ItemStack stack) {
         return SHULKER_TILE.get().canPlaceItemThroughFace(0, stack, null);
+    }
+
+    @Override
+    public void saveAdditional(CompoundTag tag) {
+        tag.putInt("north", NORTH);
+        tag.putInt("east", EAST);
+        tag.putInt("west", WEST);
+        tag.putInt("south", SOUTH);
+        super.saveAdditional(tag);
+    }
+
+    @Override
+    public void load(CompoundTag tag) {
+        NORTH = tag.getInt("north");
+        EAST = tag.getInt("east");
+        WEST = tag.getInt("west");
+        SOUTH = tag.getInt("south");
+        super.load(tag);
+    }
+
+    @Override
+    protected void updateBlockState(BlockState state, boolean b) {
+        //
+    }
+
+    @Override
+    protected void playOpenSound(BlockState state) {
+        //
+    }
+
+    @Override
+    protected void playCloseSound(BlockState state) {
+        //
     }
 }

@@ -2,9 +2,11 @@ package com.myst.biomebackport.client;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.blaze3d.platform.NativeImage;
+import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
+import com.myst.biomebackport.BiomeBackport;
 import com.myst.biomebackport.common.block.HangingSignBlock;
 import com.myst.biomebackport.common.block.HangingSignBlockWall;
 import com.myst.biomebackport.common.block.HangingSignBlockCeiling;
@@ -21,11 +23,13 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -33,9 +37,11 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
 
+import static com.myst.biomebackport.BiomeBackport.modPath;
 import static net.minecraft.client.renderer.Sheets.SIGN_SHEET;
 
 @OnlyIn(Dist.CLIENT)
@@ -48,6 +54,13 @@ public class HangingSignRenderer implements BlockEntityRenderer<HangingSignBlock
         this.signModels = WoodType.values().collect(ImmutableMap.toImmutableMap((type) -> {
             return type;
         }, (type) -> {
+            try {
+                ResourceLocation location = new ResourceLocation(type.name());
+                ResourceLocation texture = new ResourceLocation("biomebackport", "sign/" + location.getPath());
+                Minecraft.getInstance().getResourceManager().getResourceOrThrow(texture);
+            } catch (FileNotFoundException e) {
+                return new HangingSignRenderer.SignModel(context.bakeLayer(createSignModelName(WoodType.OAK)));
+            }
             return new HangingSignRenderer.SignModel(context.bakeLayer(createSignModelName(type)));
         }));
         this.font = context.getFont();
@@ -169,7 +182,7 @@ public class HangingSignRenderer implements BlockEntityRenderer<HangingSignBlock
 
     public static ModelLayerLocation createSignModelName(WoodType type) {
         ResourceLocation location = new ResourceLocation(type.name());
-        return new ModelLayerLocation(new ResourceLocation("biomebackport", "sign/" + location.getPath()), "main");
+        return new ModelLayerLocation(modPath("signs/hanging/" + location.getPath()), "main");
     }
 
     public static LayerDefinition createSignLayer() {

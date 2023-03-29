@@ -43,6 +43,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(consumer);
         shapedPressurePlate(consumer, ItemRegistry.CHERRY_PRESSURE_PLATE.get(), ItemRegistry.CHERRY_PLANKS.get());
         shapedSign(consumer, ItemRegistry.CHERRY_SIGN.get(), ItemRegistry.CHERRY_PLANKS.get());
+        shapedHangingSign(consumer, ItemRegistry.CHERRY_HANGING_SIGN.get(), ItemRegistry.STRIPPED_CHERRY_LOG.get());
         shapedBoat(consumer, ItemRegistry.CHERRY_BOAT.get(), ItemRegistry.CHERRY_PLANKS.get());
         chestBoat(consumer, ItemRegistry.CHERRY_BOAT_CHEST.get(), ItemRegistry.CHERRY_BOAT.get());
 
@@ -62,6 +63,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(consumer);
         shapedPressurePlate(consumer, ItemRegistry.BAMBOO_PRESSURE_PLATE.get(), ItemRegistry.BAMBOO_PLANKS.get());
         shapedSign(consumer, ItemRegistry.BAMBOO_SIGN.get(), ItemRegistry.BAMBOO_PLANKS.get());
+        shapedHangingSign(consumer, ItemRegistry.BAMBOO_HANGING_SIGN.get(), ItemRegistry.STRIPPED_BAMBOO_BLOCK.get());
         shapedBoat(consumer, ItemRegistry.BAMBOO_RAFT.get(), ItemRegistry.BAMBOO_PLANKS.get());
         chestBoat(consumer, ItemRegistry.BAMBOO_CHEST_RAFT.get(), ItemRegistry.BAMBOO_RAFT.get());
 
@@ -82,6 +84,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" C").pattern("W ")
                 .unlockedBy("has_input", has(Items.COPPER_INGOT))
                 .save(consumer);
+
+        shapedHangingSign(consumer, ItemRegistry.OAK_HANGING_SIGN.get(), Items.STRIPPED_OAK_LOG);
+        shapedHangingSign(consumer, ItemRegistry.SPRUCE_HANGING_SIGN.get(), Items.STRIPPED_SPRUCE_LOG);
+        shapedHangingSign(consumer, ItemRegistry.BIRCH_HANGING_SIGN.get(), Items.STRIPPED_BIRCH_LOG);
+        shapedHangingSign(consumer, ItemRegistry.JUNGLE_HANGING_SIGN.get(), Items.STRIPPED_JUNGLE_LOG);
+        shapedHangingSign(consumer, ItemRegistry.ACACIA_HANGING_SIGN.get(), Items.STRIPPED_ACACIA_LOG);
+        shapedHangingSign(consumer, ItemRegistry.DARK_OAK_HANGING_SIGN.get(), Items.STRIPPED_DARK_OAK_LOG);
+        shapedHangingSign(consumer, ItemRegistry.MANGROVE_HANGING_SIGN.get(), Items.STRIPPED_MANGROVE_LOG);
+        shapedHangingSign(consumer, ItemRegistry.CRIMSON_HANGING_SIGN.get(), Items.STRIPPED_CRIMSON_STEM);
+        shapedHangingSign(consumer, ItemRegistry.WARPED_HANGING_SIGN.get(), Items.STRIPPED_WARPED_STEM);
     }
     private static void shaped1x2(Consumer<FinishedRecipe> recipeConsumer, ItemLike out, ItemLike input) {
         shaped(out, 4).define('#', input).pattern("#").pattern("#").unlockedBy("has_input", has(input)).save(recipeConsumer);
@@ -92,11 +104,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static void shaped3x3(Consumer<FinishedRecipe> recipeConsumer, ItemLike out, ItemLike input, int count) {
         shaped(out, count).define('#', input).pattern("###").pattern("###").pattern("###")
                 .unlockedBy("has_input", has(input)).save(recipeConsumer);
-    }
-
-    private static void shapedSign(Consumer<FinishedRecipe> recipeConsumer, ItemLike sign, ItemLike input) {
-        shaped(sign, 3).define('#', Tags.Items.RODS_WOODEN).define('W', input)
-                .pattern("WWW").pattern("WWW").pattern(" # ").unlockedBy("has_input", has(input)).save(recipeConsumer);
     }
 
     private static void shapedBoat(Consumer<FinishedRecipe> recipeConsumer, ItemLike boat, ItemLike input) {
@@ -134,5 +141,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static void shapedStairs(Consumer<FinishedRecipe> recipeConsumer, ItemLike stairs, ItemLike input) {
         shaped(stairs, 4).define('#', input).pattern("#  ").pattern("## ").pattern("###").unlockedBy("has_input", has(input)).save(recipeConsumer);
     }
+    private static void shapedSign(Consumer<FinishedRecipe> recipeConsumer, ItemLike sign, ItemLike input) {
+        shaped(sign, 3).define('#', Tags.Items.RODS_WOODEN).define('W', input)
+                .pattern("WWW").pattern("WWW").pattern(" # ").unlockedBy("has_input", has(input)).save(recipeConsumer);
+    }
 
+    private static void shapedHangingSign(Consumer<FinishedRecipe> recipeConsumer, ItemLike sign, ItemLike input) {
+        shaped(sign, 3).define('#', Items.CHAIN).define('W', input)
+                .pattern("# #").pattern("WWW").pattern("WWW").unlockedBy("has_input", has(input)).save(recipeConsumer);
+    }
 }

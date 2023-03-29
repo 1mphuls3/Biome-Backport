@@ -4,9 +4,11 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -60,8 +62,8 @@ public class HangingSignBlockWall extends HangingSignBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState blockstate = this.defaultBlockState();
-        FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
-        LevelReader levelreader = context.getLevel();
+        LevelReader level = context.getLevel();
+        FluidState fluidstate = level.getFluidState(context.getClickedPos());
         BlockPos blockpos = context.getClickedPos();
         Direction[] direction = Direction.orderedByNearest(context.getPlayer());
         Direction clickedFace = context.getClickedFace().getOpposite();
@@ -77,12 +79,12 @@ public class HangingSignBlockWall extends HangingSignBlock {
             }
         }
 
-        if(dir.getAxis().isHorizontal() && (context.getLevel().getBlockState(blockpos.relative(blockstate.getValue(FACING).getClockWise()))
-                .isFaceSturdy(context.getLevel(), blockpos, clickedFace) || 
-                context.getLevel().getBlockState(blockpos.relative(blockstate.getValue(FACING).getCounterClockWise()))
-                .isFaceSturdy(context.getLevel(), blockpos, clickedFace))) {
+        if(dir.getAxis().isHorizontal() && (level.getBlockState(blockpos.relative(dir.getOpposite().getClockWise()))
+                .isFaceSturdy(level, blockpos.relative(dir.getOpposite().getClockWise()), clickedFace)
+                || level.getBlockState(blockpos.relative(dir.getOpposite().getCounterClockWise()))
+                .isFaceSturdy(level, blockpos.relative(dir.getOpposite().getCounterClockWise()), clickedFace))) {
             blockstate = blockstate.setValue(FACING, dir.getOpposite());
-            if (blockstate.canSurvive(levelreader, blockpos)) {
+            if (blockstate.canSurvive(level, blockpos)) {
                 return blockstate.setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
             }
         }

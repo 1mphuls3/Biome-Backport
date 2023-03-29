@@ -1,4 +1,4 @@
-// 1.19.2	2023-03-09T19:52:05.3391867	LootTables
+// 1.19.2	2023-03-10T19:21:24.4208045	LootTables
 4e5450a2d1efc8c235b0d66d18d1cd8391b6b3a3 data/biomebackport/loot_tables/blocks/acacia_hanging_sign.json
 4e5450a2d1efc8c235b0d66d18d1cd8391b6b3a3 data/biomebackport/loot_tables/blocks/acacia_wall_hanging_sign.json
 ac10d05ec72eab2745c1696c4979c1b543bd5be5 data/biomebackport/loot_tables/blocks/bamboo_button.json
@@ -52,7 +52,7 @@ c2992d274c955a72750c46e33c330c19b9222e28 data/biomebackport/loot_tables/blocks/d
 3479c0cd1eb91d83c25dc9bbcfb35dfc16edcdd8 data/biomebackport/loot_tables/blocks/oak_wall_hanging_sign.json
 ce6981ea59fa29b2192ee60cb58935cd288616b7 data/biomebackport/loot_tables/blocks/pink_petals.json
 4d3b06b6e86e37beb496747554027b138cdb989f data/biomebackport/loot_tables/blocks/spruce_hanging_sign.json
-2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/biomebackport/loot_tables/blocks/spruce_wall_hanging_sign.json
+4d3b06b6e86e37beb496747554027b138cdb989f data/biomebackport/loot_tables/blocks/spruce_wall_hanging_sign.json
 347359471dcac408db598ea3023b7d6b93326b24 data/biomebackport/loot_tables/blocks/stripped_cherry_log.json
 8f0587b27e0c047fc72cba9dcb0b6b9be93e7d76 data/biomebackport/loot_tables/blocks/stripped_cherry_wood.json
 4f645ebd83eecb254cce8d20d4d0b4077e09cdc8 data/biomebackport/loot_tables/blocks/warped_hanging_sign.json

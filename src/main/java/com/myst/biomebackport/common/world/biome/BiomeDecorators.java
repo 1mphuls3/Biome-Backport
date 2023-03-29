@@ -14,7 +14,6 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import java.awt.*;
 
 public class BiomeDecorators {
-
     private static Biome biome(Biome.Precipitation precipitation, float temperature, float downfall, int waterColor, int waterFogColor,
                                int grassColor, int foliageColor, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder) {
         return (new Biome.BiomeBuilder())

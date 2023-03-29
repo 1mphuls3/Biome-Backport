@@ -13,14 +13,13 @@ import com.myst.biomebackport.core.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.models.blockstates.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -47,6 +46,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         Set<RegistryObject<Block>> blocks = new HashSet<>(BlockRegistry.BLOCKS.getEntries());
+
         DataHelper.takeAll(blocks, i -> i.get() instanceof LeavesBlock).forEach(this::cutoutBlock);
         DataHelper.takeAll(blocks, i -> i.get() instanceof AbstractGlassBlock).forEach(this::translucentBlock);
 
@@ -95,7 +95,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
     public void woodBlock(RegistryObject<Block> blockRegistryObject) {
         String name = Registry.BLOCK.getKey(blockRegistryObject.get()).getPath();
-        String baseName = name.substring(0, name.length()-5) + "_log";
+        String baseName = name.substring(0, name.length() - 5) + "_log";
         ModelFile vertical = models().withExistingParent(name, new ResourceLocation("block/cube_column"))
                 .texture("end", modPath("block/" + baseName)).texture("side", modPath("block/" + baseName));
         ModelFile horizontal = models().withExistingParent(name + "_horizontal", new ResourceLocation("block/cube_column_horizontal"))
@@ -104,7 +104,8 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         getVariantBuilder(blockRegistryObject.get()).partialState()
                 .with(RotatedPillarBlock.AXIS, Direction.Axis.X).modelForState().modelFile(horizontal).rotationX(90).rotationY(90).addModel().partialState()
                 .with(RotatedPillarBlock.AXIS, Direction.Axis.Z).modelForState().modelFile(horizontal).rotationX(90).addModel().partialState()
-                .with(RotatedPillarBlock.AXIS, Direction.Axis.Y).modelForState().modelFile(vertical).addModel();}
+                .with(RotatedPillarBlock.AXIS, Direction.Axis.Y).modelForState().modelFile(vertical).addModel();
+    }
 
     public void logBlock(RegistryObject<Block> blockRegistryObject) {
         String name = Registry.BLOCK.getKey(blockRegistryObject.get()).getPath();

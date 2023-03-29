@@ -22,12 +22,12 @@ public class CherryGroveRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<com.mojang.datafixers.util.Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             List<Climate.ParameterPoint> grovePoints = new ParameterUtils.ParameterPointListBuilder()
-                    .temperature(Temperature.COOL, Temperature.NEUTRAL, Temperature.UNFROZEN)//TODO look at vanilla temperatures (ice spikes) and make custom params
-                    .humidity(Humidity.ARID, Humidity.NEUTRAL, Humidity.WET, Humidity.HUMID)
                     .continentalness(Continentalness.span(Continentalness.MID_INLAND, Continentalness.FAR_INLAND))
-                    .erosion(Erosion.EROSION_0, Erosion.EROSION_1, Erosion.EROSION_2)
-                    .depth(Depth.SURFACE, Depth.FLOOR)
+                    .erosion(Erosion.EROSION_0, Erosion.EROSION_1)
+                    .temperature(Temperature.COOL, Temperature.NEUTRAL, Temperature.WARM)
+                    .humidity(Humidity.ARID, Humidity.NEUTRAL, Humidity.WET, Humidity.HUMID)
                     .weirdness(Weirdness.HIGH_SLICE_VARIANT_ASCENDING, Weirdness.HIGH_SLICE_VARIANT_DESCENDING, Weirdness.MID_SLICE_NORMAL_ASCENDING)
+                    .depth(Depth.SURFACE, Depth.FLOOR)
                     .build();
             grovePoints.forEach(point -> builder.replaceBiome(point, BiomeInitializer.CHERRY_GROVE));
         });

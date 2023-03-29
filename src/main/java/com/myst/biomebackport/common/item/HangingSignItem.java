@@ -2,6 +2,7 @@ package com.myst.biomebackport.common.item;
 
 import com.myst.biomebackport.common.block.HangingSignBlockCeiling;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.BlockPlaceContext;

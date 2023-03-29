@@ -33,8 +33,8 @@ public class HangingSignBlockCeiling extends HangingSignBlock {
     private static final VoxelShape SHAPEX = Block.box(7, 0, 1, 9, 10, 15);
     private static final VoxelShape SHAPEZ = Block.box(1, 0, 7, 15, 10, 9);
 
-    public HangingSignBlockCeiling(BlockBehaviour.Properties pProperties, WoodType pType) {
-        super(pProperties, pType);
+    public HangingSignBlockCeiling(BlockBehaviour.Properties properties, WoodType type) {
+        super(properties, type);
         this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.FALSE).setValue(ATTACHED, false));
     }
 
@@ -73,8 +73,6 @@ public class HangingSignBlockCeiling extends HangingSignBlock {
         }
 
         boolean attached = ((shape.max(axis) <= (0.625f)) || shape.min(axis) >= (0.375f));
-
-        context.getPlayer().displayClientMessage(Component.literal(((shape.max(axis)) + " " + shape.min(axis))), true);
 
         if(!state.isFaceSturdy(level, pos, context.getClickedFace()) && !attached) return null;
 
