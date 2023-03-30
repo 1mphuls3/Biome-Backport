@@ -2,20 +2,14 @@ package com.myst.biomebackport.common.blockentity;
 
 import com.google.common.base.Suppliers;
 import com.myst.biomebackport.client.DecoratedPotContainerMenu;
-import com.myst.biomebackport.common.block.DecoratedPotBlock;
 import com.myst.biomebackport.core.blockentity.ContainerBlockEntity;
-import com.myst.biomebackport.core.blockentity.ExtendedItemStackHandler;
-import com.myst.biomebackport.core.config.Config;
 import com.myst.biomebackport.core.config.ServerConfig;
-import com.myst.biomebackport.core.helper.BlockHelper;
 import com.myst.biomebackport.core.helper.IntHelper;
 import com.myst.biomebackport.core.registry.BlockEntityRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -23,7 +17,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
@@ -37,7 +30,7 @@ public class DecoratedPotBlockEntity extends ContainerBlockEntity {
     public int WEST;
     public int SOUTH;
 
-    public InteractionResult onUse(Player player, Direction side) {
+    public void onUse(Player player, Direction side) {
         int step = player.isShiftKeyDown() ? -1 : 1;
 
         if(side == Direction.NORTH) {
@@ -49,7 +42,6 @@ public class DecoratedPotBlockEntity extends ContainerBlockEntity {
         } else if(side == Direction.SOUTH) {
             SOUTH = IntHelper.wrapAround(SOUTH + step, 0, 20);
         }
-        return InteractionResult.SUCCESS;
     }
 
     @Override

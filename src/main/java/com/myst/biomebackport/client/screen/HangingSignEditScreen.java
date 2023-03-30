@@ -5,7 +5,7 @@ import com.mojang.blaze3d.platform.Lighting;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
-import com.myst.biomebackport.client.HangingSignRenderer;
+import com.myst.biomebackport.client.renderer.HangingSignRenderer;
 import com.myst.biomebackport.common.blockentity.HangingSignBlockEntity;
 import com.myst.biomebackport.core.networking.HangingSignC2SPacket;
 import com.myst.biomebackport.core.networking.ModMessages;
@@ -19,12 +19,12 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
 import java.util.stream.IntStream;
 
+import static com.myst.biomebackport.BiomeBackport.modPath;
 import static net.minecraft.client.renderer.Sheets.SIGN_SHEET;
 
 public class HangingSignEditScreen extends Screen {
@@ -33,7 +33,7 @@ public class HangingSignEditScreen extends Screen {
     private int line;
     private TextFieldHelper signField;
     private WoodType woodType;
-    private HangingSignRenderer.SignModel signModel;
+    private HangingSignRenderer.Model model;
     private final String[] messages;
     public HangingSignEditScreen(HangingSignBlockEntity sign, boolean filteringEnabled) {
         super(Component.translatable("sign.edit"));
@@ -60,7 +60,7 @@ public class HangingSignEditScreen extends Screen {
         });
         BlockState blockstate = this.sign.getBlockState();
         this.woodType = HangingSignRenderer.getWoodType(blockstate.getBlock());
-        this.signModel = HangingSignRenderer.createSignModel(this.minecraft.getEntityModels(), this.woodType);
+        this.model = HangingSignRenderer.createSignModel(this.minecraft.getEntityModels(), this.woodType);
     }
 
     @Override
@@ -127,10 +127,10 @@ public class HangingSignEditScreen extends Screen {
         stack.scale(0.6666667F, -0.6666667F, -0.6666667F);
         stack.translate(0, -1.15, 0);
         MultiBufferSource.BufferSource multibuffersource$buffersource = this.minecraft.renderBuffers().bufferSource();
-        Material material = new Material(SIGN_SHEET, new ResourceLocation("biomebackport", "entity/signs/hanging/" + this.woodType.name()));
-        VertexConsumer vertexconsumer = material.buffer(multibuffersource$buffersource, this.signModel::renderType);
-        this.signModel.vchains.visible = false;
-        this.signModel.root.render(stack, vertexconsumer, 15728880, OverlayTexture.NO_OVERLAY);
+        Material material = new Material(SIGN_SHEET, modPath("entity/signs/hanging/" + this.woodType.name().replace("biomebackport:", "")));
+        VertexConsumer vertexconsumer = material.buffer(multibuffersource$buffersource, this.model::renderType);
+        this.model.vchains.visible = false;
+        this.model.root.render(stack, vertexconsumer, 15728880, OverlayTexture.NO_OVERLAY);
         stack.popPose();
         stack.translate(0.0D, -0.04, 0.046666667F);
         stack.scale(0.010416667F, -0.010416667F, 0.010416667F);

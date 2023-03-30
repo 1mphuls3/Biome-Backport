@@ -12,14 +12,24 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class ChiselItem extends Item {
     public ChiselItem(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public boolean doesSneakBypassUse(ItemStack stack, LevelReader level, BlockPos pos, Player player) {
+        return false;
     }
 
     @Override
@@ -31,7 +41,6 @@ public class ChiselItem extends Item {
         InteractionHand hand = context.getHand();
 
         if(level.getBlockState(pos).getBlock() instanceof DecoratedPotBlock) {
-            player.displayClientMessage(Component.literal("active"), true);//TODO remove
             if (level.getBlockEntity(pos) instanceof DecoratedPotBlockEntity pot) {
                 pot.onUse(player, side);
             }
@@ -43,6 +52,6 @@ public class ChiselItem extends Item {
             }
         }
 
-        return super.useOn(context);
+        return InteractionResult.PASS;
     }
 }

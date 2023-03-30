@@ -72,7 +72,7 @@ public class DecoratedPotRenderer<T extends DecoratedPotBlockEntity> implements 
             if(indexes[i] > 0) {
                 TextureAtlasSprite texture = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(TEXTURES[indexes[i]-1]);
 
-                int ambientOcclusion = level.getBlockState(blockEntity.getBlockPos().below()).isViewBlocking(level, blockEntity.getBlockPos().below()) ? 150 : 175;
+                int ambientOcclusion = level.getBlockState(blockEntity.getBlockPos().below()).isViewBlocking(level, blockEntity.getBlockPos().below()) ? 160 : 175;
 
                 renderTexture(stackIn, vertexConsumer, texture,
                         15/16F, 0F, 1/16F, 1/16F, 1F, 15/16F,

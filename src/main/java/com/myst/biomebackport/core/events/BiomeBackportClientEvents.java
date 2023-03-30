@@ -1,18 +1,15 @@
 package com.myst.biomebackport.core.events;
 
 import com.myst.biomebackport.client.ColorManager;
-import com.myst.biomebackport.client.HangingSignRenderer;
+import com.myst.biomebackport.client.renderer.HangingSignRenderer;
 import com.myst.biomebackport.client.renderer.DecoratedPotRenderer;
 import com.myst.biomebackport.common.block.ModWoodTypes;
 import com.myst.biomebackport.common.entity.renderer.ModBoatRenderer;
 import com.myst.biomebackport.core.registry.BlockEntityRegistry;
 import com.myst.biomebackport.core.registry.EntityRegistry;
-import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -61,9 +58,9 @@ public class BiomeBackportClientEvents {
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
         if (event.getAtlas().location().equals(Sheets.SIGN_SHEET)) {
             event.addSprite(modPath("entity/signs/hanging/acacia"));
-            event.addSprite(modPath("entity/signs/hanging/bamboo_wood"));
+            event.addSprite(modPath("entity/signs/hanging/bamboo"));
             event.addSprite(modPath("entity/signs/hanging/birch"));
-            event.addSprite(modPath("entity/signs/hanging/cherry_wood"));
+            event.addSprite(modPath("entity/signs/hanging/cherry"));
             event.addSprite(modPath("entity/signs/hanging/crimson"));
             event.addSprite(modPath("entity/signs/hanging/dark_oak"));
             event.addSprite(modPath("entity/signs/hanging/jungle"));

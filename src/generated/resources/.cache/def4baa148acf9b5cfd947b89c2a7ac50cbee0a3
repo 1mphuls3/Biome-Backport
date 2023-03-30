@@ -1,4 +1,4 @@
-// 1.19.2	2023-03-09T19:52:05.3351934	BiomeBackport Block Tags
+// 1.19.2	2023-03-28T18:44:35.6066932	BiomeBackport Block Tags
 4af87c9786907549ca705f9aa3268c6806f75073 data/biomebackport/tags/blocks/bamboo_blocks.json
 b094647d0864afd867923be0e42859df66b6241f data/biomebackport/tags/blocks/cherry_logs.json
 da196be25636e14bc429710ac5f2b16068c91839 data/biomebackport/tags/blocks/wall_hanging_signs.json
@@ -11,7 +11,7 @@ aec2faa4723a4123a1001c520d1e0356e6b3ef84 data/minecraft/tags/blocks/fence_gates.
 a9900875b0aca127656cc0204b5fa01ea59ff4f4 data/minecraft/tags/blocks/leaves.json
 b094647d0864afd867923be0e42859df66b6241f data/minecraft/tags/blocks/logs.json
 b094647d0864afd867923be0e42859df66b6241f data/minecraft/tags/blocks/logs_that_burn.json
-f5c3f52e9137b12a7fd81751332dde119cee97ed data/minecraft/tags/blocks/mineable/axe.json
+4271d77f4f347c4adb4a7ee14d7f3722fdf09ebf data/minecraft/tags/blocks/mineable/axe.json
 5e6ed90283631385ca9e560f0bc882614badb642 data/minecraft/tags/blocks/mineable/hoe.json
 532d158ef8bcb8a0ab54c24a695314b226555592 data/minecraft/tags/blocks/mineable/pickaxe.json
 b094647d0864afd867923be0e42859df66b6241f data/minecraft/tags/blocks/overworld_natural_logs.json

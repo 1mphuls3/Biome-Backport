@@ -6,6 +6,7 @@ import com.myst.biomebackport.core.registry.ItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
@@ -47,6 +48,18 @@ public class DecoratedPotBlock extends Block implements EntityBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if(player.getItemInHand(hand).getItem() == ItemRegistry.CHISEL.get()) {
+            Direction side = hit.getDirection();
+
+            if(level.getBlockState(pos).getBlock() instanceof DecoratedPotBlock) {
+                if (level.getBlockEntity(pos) instanceof DecoratedPotBlockEntity pot) {
+                    pot.onUse(player, side);
+                }
+                if(side.getAxis() != Direction.Axis.Y) {
+                    player.swing(hand);
+                    level.playSound(player, pos, SoundRegistry.CHISEL_USE.get(), SoundSource.BLOCKS, 1.0F, 0.5F);
+                    player.getItemInHand(hand).hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+                }
+            }
             return InteractionResult.CONSUME;
         }
         if (level.isClientSide) {

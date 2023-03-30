@@ -28,6 +28,8 @@ public class BlockRegistry {
             () -> new PinkPetalsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
     public static final RegistryObject<Block> CHERRY_SAPLING = BLOCKS.register("cherry_sapling",
             () -> new SaplingBlock(new CherryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+    public static final RegistryObject<Block> POTTED_CHERRY_SAPLING = BLOCKS.register("potted_cherry_sapling",
+            () -> new FlowerPotBlock(CHERRY_SAPLING.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING).noOcclusion()));
     public static final RegistryObject<Block> CHERRY_LEAVES = BLOCKS.register("cherry_leaves",
             () -> new CherryLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(ModSoundTypes.CHERRY_LEAVES).noOcclusion()));
     public static final RegistryObject<Block> CHERRY_LOG = BLOCKS.register("cherry_log",

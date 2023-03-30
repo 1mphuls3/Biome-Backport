@@ -44,8 +44,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapedPressurePlate(consumer, ItemRegistry.CHERRY_PRESSURE_PLATE.get(), ItemRegistry.CHERRY_PLANKS.get());
         shapedSign(consumer, ItemRegistry.CHERRY_SIGN.get(), ItemRegistry.CHERRY_PLANKS.get());
         shapedHangingSign(consumer, ItemRegistry.CHERRY_HANGING_SIGN.get(), ItemRegistry.STRIPPED_CHERRY_LOG.get());
-        shapedBoat(consumer, ItemRegistry.CHERRY_BOAT.get(), ItemRegistry.CHERRY_PLANKS.get());
-        chestBoat(consumer, ItemRegistry.CHERRY_BOAT_CHEST.get(), ItemRegistry.CHERRY_BOAT.get());
+        /*shapedBoat(consumer, ItemRegistry.CHERRY_BOAT.get(), ItemRegistry.CHERRY_PLANKS.get());
+        chestBoat(consumer, ItemRegistry.CHERRY_BOAT_CHEST.get(), ItemRegistry.CHERRY_BOAT.get());*/
 
         shaped3x3(consumer, ItemRegistry.BAMBOO_BLOCK.get(), Items.BAMBOO, 1);
 
@@ -64,8 +64,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapedPressurePlate(consumer, ItemRegistry.BAMBOO_PRESSURE_PLATE.get(), ItemRegistry.BAMBOO_PLANKS.get());
         shapedSign(consumer, ItemRegistry.BAMBOO_SIGN.get(), ItemRegistry.BAMBOO_PLANKS.get());
         shapedHangingSign(consumer, ItemRegistry.BAMBOO_HANGING_SIGN.get(), ItemRegistry.STRIPPED_BAMBOO_BLOCK.get());
-        shapedBoat(consumer, ItemRegistry.BAMBOO_RAFT.get(), ItemRegistry.BAMBOO_PLANKS.get());
-        chestBoat(consumer, ItemRegistry.BAMBOO_CHEST_RAFT.get(), ItemRegistry.BAMBOO_RAFT.get());
+        /*shapedBoat(consumer, ItemRegistry.BAMBOO_RAFT.get(), ItemRegistry.BAMBOO_PLANKS.get());
+        chestBoat(consumer, ItemRegistry.BAMBOO_CHEST_RAFT.get(), ItemRegistry.BAMBOO_RAFT.get());*/
 
         shaped1x2(consumer, ItemRegistry.BAMBOO_MOSAIC.get(), ItemRegistry.BAMBOO_PLANKS.get());
         shapedStairs(consumer, ItemRegistry.BAMBOO_MOSAIC_STAIRS.get(), ItemRegistry.BAMBOO_MOSAIC.get());

@@ -1,8 +1,7 @@
-package com.myst.biomebackport.client;
+package com.myst.biomebackport.client.renderer;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.blaze3d.platform.NativeImage;
-import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
@@ -13,7 +12,6 @@ import com.myst.biomebackport.common.block.HangingSignBlockCeiling;
 import com.myst.biomebackport.common.blockentity.HangingSignBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.model.Model;
 import net.minecraft.client.model.geom.*;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.player.LocalPlayer;
@@ -23,13 +21,11 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -47,23 +43,25 @@ import static net.minecraft.client.renderer.Sheets.SIGN_SHEET;
 @OnlyIn(Dist.CLIENT)
 public class HangingSignRenderer implements BlockEntityRenderer<HangingSignBlockEntity> {
     private static final int OUTLINE_RENDER_DISTANCE = Mth.square(16);
-    private final Map<WoodType, HangingSignRenderer.SignModel> signModels;
+    private final Map<WoodType, Model> signModels;
     private final Font font;
 
     public HangingSignRenderer(BlockEntityRendererProvider.Context context) {
-        this.signModels = WoodType.values().collect(ImmutableMap.toImmutableMap((type) -> {
-            return type;
-        }, (type) -> {
+        this.signModels = WoodType.values().collect(ImmutableMap.toImmutableMap((type) -> type, (type) -> {
             try {
-                ResourceLocation location = new ResourceLocation(type.name());
-                ResourceLocation texture = new ResourceLocation("biomebackport", "sign/" + location.getPath());
+                ResourceLocation texture = modPath("entity/signs/hanging/" + type.name().replace("biomebackport:", ""));
                 Minecraft.getInstance().getResourceManager().getResourceOrThrow(texture);
             } catch (FileNotFoundException e) {
-                return new HangingSignRenderer.SignModel(context.bakeLayer(createSignModelName(WoodType.OAK)));
+                BiomeBackport.LOGGER.debug("Using missing texture, " + modPath("entity/signs/hanging/" + type.name().replace("biomebackport:", "")));
+                return new HangingSignRenderer.Model(context.bakeLayer(createSignModelName(WoodType.OAK)));
             }
-            return new HangingSignRenderer.SignModel(context.bakeLayer(createSignModelName(type)));
+            return new Model(context.bakeLayer(createSignModelName(type)));
         }));
         this.font = context.getFont();
+    }
+    public static ModelLayerLocation createSignModelName(WoodType type) {
+        ResourceLocation location = new ResourceLocation(type.name());
+        return new ModelLayerLocation(modPath("entity/signs/hanging/" + location.getPath().replace("biomebackport:", "")), "main");
     }
 
     @Override
@@ -71,7 +69,7 @@ public class HangingSignRenderer implements BlockEntityRenderer<HangingSignBlock
         BlockState blockState = blockEntity.getBlockState();
         stack.pushPose();
         WoodType woodtype = getWoodType(blockState.getBlock());
-        HangingSignRenderer.SignModel signrenderer$signmodel = this.signModels.get(woodtype);
+        Model signrenderer$signmodel = this.signModels.get(woodtype);
         stack.translate(0.5D, 0.5D, 0.5D);
         stack.mulPose(Vector3f.XP.rotationDegrees(180));
         stack.translate(0, -1D, 0);
@@ -176,13 +174,8 @@ public class HangingSignRenderer implements BlockEntityRenderer<HangingSignBlock
         return woodtype;
     }
 
-    public static HangingSignRenderer.SignModel createSignModel(EntityModelSet entityModelSet, WoodType type) {
-        return new HangingSignRenderer.SignModel(entityModelSet.bakeLayer(createSignModelName(type)));
-    }
-
-    public static ModelLayerLocation createSignModelName(WoodType type) {
-        ResourceLocation location = new ResourceLocation(type.name());
-        return new ModelLayerLocation(modPath("signs/hanging/" + location.getPath()), "main");
+    public static Model createSignModel(EntityModelSet entityModelSet, WoodType type) {
+        return new Model(entityModelSet.bakeLayer(createSignModelName(type)));
     }
 
     public static LayerDefinition createSignLayer() {
@@ -208,13 +201,13 @@ public class HangingSignRenderer implements BlockEntityRenderer<HangingSignBlock
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static final class SignModel extends Model {
+    public static final class Model extends net.minecraft.client.model.Model {
         public final ModelPart root;
         public final ModelPart bar;
         public final ModelPart vchains;
         public final ModelPart chains;
 
-        public SignModel(ModelPart pRoot) {
+        public Model(ModelPart pRoot) {
             super(RenderType::entityCutoutNoCull);
             this.root = pRoot;
             this.bar = pRoot.getChild("bar");
